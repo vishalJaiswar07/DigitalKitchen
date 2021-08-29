@@ -1,0 +1,189 @@
+.Recipe_Container{
+display: flex;
+width:100%;
+height:auto;
+align-items: center;
+justify-content: center;
+flex-flow: column;
+
+
+}
+
+.Recipe_Image_Container{
+display: flex;
+width:100%;
+
+}
+
+.Recipe_Image{
+display: flex;
+width:100%;
+height:700px;
+object-fit:cover;
+}
+.Recipe_Title_Catagory_Container{
+    display: flex;
+    width:100%;
+    align-items: flex-start;
+    flex-flow: column;
+    justify-content: flex-start;
+    padding-left: 260px;
+    
+    height:300px;
+    box-sizing: border-box;
+
+}
+.Recipe_Catagory{
+    display: inline;
+    font-size: 27px;
+    color:#bababa;
+    font-family: "Helvetica Neue",Helvetica
+
+}
+.Recipe_Title{
+    display: flex;
+    font-size: 40px;
+    color:rgb(17, 4, 4);
+    font-family: "Helvetica Neue",Helvetica;
+    
+
+}
+.Recipe_catagory_Container{
+    display: flex;
+    height: 100px;
+    flex-flow: row;
+
+       
+}
+.Recipe_Ingredients_Container,.Recipe_Nutritions_Container{
+    display: flex;
+    align-items: flex-start;
+    flex-flow: column;
+    justify-content: flex-start;
+}
+.Recipe_Ingredient_List,.Recipe_Nutrition_List{
+    display: flex;
+    width: 100%;
+    height: 77px;
+    list-style: none;
+    margin: 0;
+    
+}
+.Ingredient_Amount,.Nutrition_Name{
+    display: inline-flex;
+    
+    color:#999999;
+    font-size:20px;
+    font-family: "Helvetica Neue",Helvetica;
+    width: 220px;
+    height:76px;
+    box-sizing: border-box;
+    padding-left: 50px;
+    align-items: center;
+    margin-right: 5px;
+    
+}
+.Ingredient_Name,.Nutrition_Amount{
+    display: inline-flex;
+    
+    color:#999999;
+    width: 835px;
+    height:76px;
+    font-size:20px;
+    font-family: "Helvetica Neue",Helvetica;
+    align-items: center;
+
+
+}
+
+
+ul:nth-child(odd){
+    background-color:#f3f3f3;
+
+}
+ul:nth-child(even){
+    background-color:#fcfcfc;
+
+}
+.hr-line{
+    width:73%;
+    height:1px;
+    background-color:#999999;
+}
+.Recipe_Ingredients_Title,.Recipe_Nutrients_Title,.Recipe_Process_Title{
+    display: inline-flex;
+    font-size: 40px;
+    color:rgb(17, 4, 4);
+    font-family: "Helvetica Neue",Helvetica;
+    height:70px;
+    margin: 0;
+    width:100%;
+    justify-content:flex-start;
+    padding-left: 260px;
+    box-sizing: border-box;
+    cursor: pointer;
+    align-items: center;
+    flex-flow:row;
+    
+
+}
+.img-caret-arrow{
+    width:30px;
+    height:30px;
+    margin-left: 700px;
+    
+}
+.img-caret-arrow:visited{
+    transform:rotate(180deg)
+
+}
+.Recipe_Process_Container{
+    display: inline-flex;
+    flex-flow: column;
+    justify-content:flex-start;
+    padding-left: 50px;
+    box-sizing: border-box;
+    align-items: center;
+    text-align: left;
+    
+
+    
+
+}
+
+.Recipe_Process_List_Container{
+    display: flex;
+    width: 100%;
+    height: 77px;
+    list-style: none;
+    margin: 0;
+    flex-flow: column;
+    justify-content: left;
+    text-align: left;
+
+
+}
+.Process_Step_Number{
+    display: flex;
+    font-family: helvetica, arial, sans-serif;
+    font-size: 35px;
+    color: #000;
+    
+    justify-content: left;
+    text-align: left;
+    margin: 5px;
+
+}
+.Process_Step{
+    display: flex;
+    font-family: helvetica, arial, sans-serif;
+    font-size: 25px;
+    color: #999999;
+    
+    justify-content: left;
+    text-align: left;
+    margin-left: 50px;
+
+}
+
+

@@ -1,0 +1,136 @@
+
+
+<div class="Recipe_Form_Container" >
+    <div class="Form_Header">
+        <p >Add Your Recipes Here</p>
+    </div>
+    <div class="Recipe_Form_Section">
+        <form [formGroup]="profileFormGroup" (submit)="handleSubmit($event)" class="recipe_Form">
+            <div class="Recipe_Form_Pane_One">
+
+            <div class="form-group">
+                <label>Name</label>
+                <input class="form-control" placeholder="Name" formControlName="name" />
+            </div>
+            <div class="form-group">
+                <label>Preparation Time:</label>
+                <input class="form-control" placeholder="Preparation Time" formControlName="preparation_time" />
+            </div>
+            <div class="form-group">
+                <label>Total  Time:</label>
+                <input class="form-control" placeholder="Total Time"formControlName="total_time" />
+            </div>
+            <div class="form-group">
+                <label>Recipe Image</label>
+                <input class="form-control" type="file" placeholder="file"formControlName="ImageUrl" (change)="handleFileInput($event.target.files)" />
+            </div>
+        </div>
+
+            
+        <div class="Recipe_Form_Pane_Two">
+            <button (click)="addNewNutrition()" type="button" class="Recipe_Form_Add_button">Add Nutrition Values</button>
+            
+            <div class="Nutrition_Container">
+
+                <ng-container formArrayName="nutrition">
+                    <ng-container *ngFor="let i of nutrition.controls;let idx=index;">
+                        <div class="form-group">
+                            <label>Nutrition</label>
+                            <form [formGroup]="i">
+                                <div class="input-group mb-3" >
+                                    <input class="form-control" placeholder="Nutrition" formControlName="nutrition" /><br />
+                                    <input class="form-control" placeholder="Amount" formControlName="amount" />
+                                    <button (click)="removeNutrition(0)" type="button" class="Recipe_Form_Delete_button delete_btn">delete</button>
+                                </div>
+                            </form>
+                        </div>
+    
+                    </ng-container>
+                </ng-container>
+            </div>
+
+
+
+
+
+            <br />
+            <button (click)="addNewCategory()" type="button" class="Recipe_Form_Add_button">Add Category</button>
+            <br />
+            <div class="Category_Container">
+                
+            <ng-container formArrayName="category">
+                <ng-container *ngFor="let a of category.controls;let idx=index;">
+                    <div class="form-group">
+                        <label>Category</label>
+                        <form [formGroup]="a">
+                            <div class="input-group mb-3" >
+                                <input class="form-control" placeholder="Category" formControlName="category" />
+                                <button (click)="removeCategory(0)" type="button" class="Recipe_Form_Delete_button delete_btn">delete</button>
+                            </div>
+                        </form>
+                    </div>
+                </ng-container>
+            </ng-container>
+            </div>
+            
+        </div>
+        <div class="Recipe_Form_Pane_Three">
+            <br />
+            <button (click)="addNewItems()" type="button" class="Recipe_Form_Add_button">Add Ingredients</button>
+            <br />
+            <div class="Ingredients_Container">
+            <ng-container formArrayName="items">
+                <ng-container *ngFor="let i of items.controls;let idx=index;">
+                    <div class="form-group">
+                        <label>Ingredients</label>
+                        <form [formGroup]="i">
+                            <div class="input-group mb-3" >
+                                <input class="form-control" placeholder="incredients" formControlName="ingredients" />
+                            <br>
+                                <input class="form-control" placeholder="amount" formControlName="amount" />
+                                <button (click)="removeItems(0)" type="button" class="Recipe_Form_Delete_button delete_btn">delete</button>
+                            </div>
+                        </form>
+                    </div>
+
+                </ng-container>
+            </ng-container>
+        </div>
+
+            <br />
+            <button (click)="addNewProcess()" type="button" class="Recipe_Form_Add_button">Add Process</button>
+            <br />
+            <div class="Process_Container">
+
+            <ng-container formArrayName="process">
+                <ng-container *ngFor="let b of process.controls;let idx=index;">
+                    <div class="form-group">
+                        <label>Process</label>
+                        <form [formGroup]="b">
+                            <div class="input-group mb-3" >
+                                <input class="form-control" placeholder="Enter the Process" formControlName="process" />
+                                <button (click)="removeProcess(0)" type="button" class="Recipe_Form_Delete_button delete_btn">delete</button>
+                            </div>
+                        </form>
+                    </div>
+                </ng-container>
+            </ng-container>
+        </div>
+            
+        </div>
+
+
+
+
+
+
+            
+        </form>
+        
+            
+            
+    </div>
+    <button class="Recipe_Form_Submit_button" style="font-size: 18px;" (click)="handleSubmit($event)">submit</button>
+
+    
+</div>

@@ -1,0 +1,182 @@
+<div class="Recipe_Container">
+  
+  
+
+  <div class="Recipe_Image_Container">
+    <img [src]="recipe.image_url" alt="" class="Recipe_Image">
+  </div>
+
+  <div class="Recipe_Title_Catagory_Container">
+    <div class="Recipe_catagory_Container" id="abc">
+      <p class="Recipe_Catagory" *ngFor="let catagory of recipe.category">&nbsp;&nbsp;{{catagory}}&nbsp;&nbsp;|</p>
+    </div>
+    <p class="Recipe_Title">{{recipe.name}}</p>
+
+  </div>
+  <br>
+
+
+  <hr class="hr-line">
+  <div class="Recipe_Ingredients_Title"  >
+    <p>Ingredients</p>
+    <img  class="img-caret-arrow" src="../../assets/svg/caret-down-solid.svg" alt="" (click)="IngredientAccordianChange()" srcset="">
+
+  </div>
+  <hr class="hr-line">
+  <div class="Recipe_Ingredients_Container" *ngIf="IngredientsAccordian">
+    <div class="Recipe_Ingredients_List_Container" id="recipe_Ingredient_id">
+      <ul class="Recipe_Ingredient_List" *ngFor="let item of recipe.items">
+        <li class="Ingredient_Amount">{{item.amount}}</li>
+        <li class="Ingredient_Name">{{item.ingredients}}</li>
+
+      </ul>
+    </div>
+  </div>
+  <br>
+  <hr class="hr-line">
+  <div class="Recipe_Nutrients_Title" >
+    <p>Nutrients</p>
+    <img (click)="NutrientAccordianChange()" class="img-caret-arrow" src="../../assets/svg/caret-down-solid.svg" alt="" srcset="">
+
+
+  </div>
+  <hr class="hr-line">
+
+  <div class="Recipe_Nutritions_Container" *ngIf="NutritionAccordian">
+    <div class="Recipe_Nutritions_List_Container" id="recipe_Nutrition_id">
+      <ul class="Recipe_Nutrition_List" *ngFor="let item of recipe.nutritions">
+        <li class="Nutrition_Amount">{{item.nutrition}}</li>
+        <li class="Nutrition_Name">{{item.amount}}</li>
+
+      </ul>
+    </div>
+  </div>
+  <hr class="hr-line">
+  <div class="Recipe_Process_Title" >
+    <p>Instructions</p>
+    
+
+  </div>
+  <hr class="hr-line">
+
+
+  <div class="Recipe_Process_Container" >
+    <div class="Recipe_Process_List_Container" id="recipe_Process_id">
+      <div class="Recipe_Process_List" *ngFor="let item of recipe.process;let i=index">
+        <div class="Process_Step_Number">Step {{i+1}}</div>
+        
+        <div class="Process_Step">{{item}}</div>
+
+      </div>
+    </div>
+  </div>
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <div class=title>
+
+    <h1> HONEY CAKE </h1>
+    <hr />
+    <p> A classic recipe from <i>The Ideal Cookery Book.</i></p>
+  </div>
+  <div class=ingredients>
+  
+    <h2> INGREDIENTS </h2>
+    <ul>
+      <li><sup>1</sup>/<sub>2</sub> lb. flour</li>
+      <li>2 eggs</li>
+      <li>3 ozs. butter</li>
+      <li>3 ozs. sugar</li>
+      <li><sup>1</sup>/<sub>2</sub> lb. honey</li>
+      <li>1 teaspooonful baking powder</li>
+    </ul>
+  </div>
+  <div class=instructions>
+  
+    <h2> INSTRUCTIONS </h2>
+    <ol>
+      <li>Cream the butter and sugar together; beat in the eggs, <i>one at a time.</i> </li>
+      <li> Add the honey, and mix thoroughly. </li>
+      <li>Sieve the flour and baking-powder together, stir them into the cake mixture. </li>
+      <li> When well mixed, turn into a cake-tin that has been lined with paper. </li>
+      <li> Press it down well, make the top level, and put into a moderate oven; bake for about <strong>one hour.</strong>
+      <li> When done turn out of the tin, remove the paper, and then place on a sieve to cool. </li>
+    </ol>
+  </div>
+  <br />
+  <br />
+  <br />
+  <br />
+  <br />
+  <hr /> -->
